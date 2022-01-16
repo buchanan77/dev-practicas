@@ -1,0 +1,238 @@
+
+:root{
+	--red:#d84040;
+	--green: #30b930;
+}
+
+
+body{
+	padding: 25px 0;
+	background: #dde1ef;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container{
+	height: 200px;
+	width: 450px;
+	margin: 100px auto;
+}
+
+ul{
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	background: #dde1ef;
+	box-shadow: -3px -3px 7px #fff,
+	3px 3px 5px rgba(94, 104, 121, .7);
+}
+
+li{
+	margin: 0 10px;
+	list-style: none;
+	font-size: 1.5em;
+	position: relative;
+}
+
+.btn{
+	display: none;
+	position: absolute;
+}
+
+.boton{
+	cursor: pointer;
+	height: 60px;
+	width: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(223, 220, 220);
+	border-radius: 50%;
+	box-shadow: -3px -3px 8px #fff,
+	3px 3px 5px rgba(94, 104, 121, .7);
+}
+
+.btn:checked ~ .boton{
+	box-shadow: inset -3px -3px 7px #fff,
+	inset 3px 3px 5px rgba(0, 0, 0, .2);
+}
+
+.facebook{
+	color: #3b5998;
+}
+
+.twitter{
+	color: #55acee;
+}
+
+.youtube{
+	color: #bb0000;
+}
+
+.whatsapp{
+	color: #4dc247;
+}
+
+.telegram{
+	color: #0088cc;
+}
+
+
+
+
+.container2{
+	height: 200px;
+	width: 450px;
+	margin: 100px auto;
+}
+
+.container2 > ul{
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	background: #dde1ef;
+	box-shadow: -3px -3px 7px #fff,
+	3px 3px 5px rgba(94, 104, 121, .7);
+}
+
+li{
+	margin: 0 10px;
+	list-style: none;
+	font-size: 1.5em;
+	position: relative;
+}
+
+.btn2{
+	display: none;
+	position: absolute;
+}
+
+.boton2{
+	cursor: pointer;
+	height: 60px;
+	width: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(223, 220, 220);
+	border-radius: 15px;
+	box-shadow: -3px -3px 8px #fff,
+	3px 3px 5px rgba(94, 104, 121, .7);
+}
+
+.btn2:checked ~ .boton2{
+	box-shadow: inset -3px -3px 7px #fff,
+	inset 3px 3px 5px rgba(0, 0, 0, .2);
+	color: #0088cc;
+}
+
+
+/* Form */
+
+.card{
+	padding: 0 30px;
+	margin-bottom: 200px;
+	height: 350px;
+	width: 200px;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 10px;
+	background: #e5e7ee;
+	box-shadow: -3px -3px 7px #fff,
+	3px 3px 5px rgba(94, 104, 121, .7);
+}
+
+.card h3{
+	font-size: 15px;
+	font-family: sans-serif;
+	letter-spacing: .5px;
+}
+
+.card label{
+	width: 150px;
+	margin: 10px 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 12px;
+	font-family: sans-serif;
+	letter-spacing: .5px;
+}
+
+.card__input{
+	padding: 3px 6px;
+	margin: 2px 0;
+	width: 150px;
+	background: #eeeeee;
+	border-radius: 10px;
+	border: 1px solid #bbbbbb;
+	box-shadow: -3px -3px 7px #fff,
+	3px 3px 3px rgba(0, 0, 0, .2);
+	font-size: 10px;
+}
+
+.card__input:focus{
+	outline: #bbbbbb;
+	border: 1px solid #bbbbbb;
+	border-radius: 10px;
+	box-shadow: inset -3px -3px 7px #fff,
+    inset 3px 3px 3px rgba(0, 0, 0, .2);
+}
+
+span{
+	font-size: 8px;
+	color: #929090;
+}
+
+.container-submit{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: row;
+}
+
+.card .submit{
+	margin: 0 5px;
+	padding: 8px 5px;
+	height: 30px;
+	width: 70px;
+	font-size: 12px;
+	border-radius: 5px;
+}
+
+.submit__save{
+	background: var(--green);
+	color: #fff;
+	border: 1px solid #bbb;
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, .2);
+}
+
+.submit__save:hover{
+	cursor: pointer;
+	background: rgb(11, 151, 34);
+	color: #fff;
+	border: 1px solid #bbb;
+}
+
+.submit__cancel{
+	cursor: pointer;
+	background: var(--red);
+	color: #fff;
+	border: 1px solid #bbb;
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, .2);
+}
+
+.submit__cancel:hover{
+	background: #b60303;
+	color: #fff;
+	border: 1px solid #bbb;
+}
