@@ -230,66 +230,75 @@
 
 
 
-class Persona{
-    constructor(nombre, edad){
-        this.nombre = nombre;
-        this.edad = edad;
-    }
+// class Persona{
+//     constructor(nombre, edad){
+//         this.nombre = nombre;
+//         this.edad = edad;
+//     }
 
 
 
-    saludar(){
-        console.log(`Hola mi nombre es ${this.nombre} y mi edad es ${this.edad} años.`)
-    }
+//     saludar(){
+//         console.log(`Hola mi nombre es ${this.nombre} y mi edad es ${this.edad} años.`)
+//     }
 
-}
+// }
 
-const rocio = new Persona('Rocio', 24);
+// const rocio = new Persona('Rocio', 24);
 
-rocio.saludar();
-
-
-
-
-class Superheroe extends Persona{
-    constructor(nombre, poderes, enemigos, calificacion){
-        super(nombre);
-        this.poderes = poderes;
-        this.enemigos = enemigos;
-        this.calificacion = null;
-    }
-
-    saludar(){
-        console.log(`Hola soy ${this.nombre}, mis poderes son ${this.poderes} y mis enemigos son ${this.enemigos}.`)
-    }
-
-    calificacionHeroe(){
-        console.log(`Soy ${this.nombre} y mi calificacion como heroe es de ${this.calificacion} puntos.`)
-    }
+// rocio.saludar();
 
 
 
-    get getCalificacion(){
-        return this.calificacion;
-    }
 
-    set setCalificacion(calificacion){
-        this.calificacion = calificacion;
-    }
+// class Superheroe extends Persona{
+//     constructor(nombre, poderes, enemigos, calificacion){
+//         super(nombre);
+//         this.poderes = poderes;
+//         this.enemigos = enemigos;
+//         this.calificacion = null;
+//     }
 
-}
+//     saludar(){
+//         console.log(`Hola soy ${this.nombre}, mis poderes son ${this.poderes} y mis enemigos son ${this.enemigos}.`)
+//     }
+
+//     calificacionHeroe(){
+//         console.log(`Soy ${this.nombre} y mi calificacion como heroe es de ${this.calificacion} puntos.`)
+//     }
 
 
-const batman = new Superheroe('Batman', 'baticosas', 'Wason y Acertijo')
 
-batman.saludar();
+//     get getCalificacion(){
+//         return this.calificacion;
+//     }
 
-console.log(batman.getCalificacion);
+//     set setCalificacion(calificacion){
+//         this.calificacion = calificacion;
+//     }
 
-batman.setCalificacion = 10;
+// }
 
-console.log(batman.getCalificacion);
 
-batman.calificacionHeroe();
+// const batman = new Superheroe('Batman', 'baticosas', 'Wason y Acertijo')
+
+// batman.saludar();
+
+// console.log(batman.getCalificacion);
+
+// batman.setCalificacion = 10;
+
+// console.log(batman.getCalificacion);
+
+// batman.calificacionHeroe();
 
 //--------------------------------------------------
+
+
+//------- Objeto Date ----------------------------
+
+let fecha = new Date();
+
+console.log(fecha.toLocaleString());
+console.log(fecha.toLocaleDateString());
+console.log(fecha.toLocaleTimeString());
