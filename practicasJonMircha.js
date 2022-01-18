@@ -299,6 +299,14 @@
 
 let fecha = new Date();
 
+console.log(fecha.getFullYear());
+console.log(fecha.getHours());
+console.log(fecha.getMinutes());
+console.log(fecha.getSeconds());
+console.log(fecha.getMilliseconds())
 console.log(fecha.toLocaleString());
 console.log(fecha.toLocaleDateString());
 console.log(fecha.toLocaleTimeString());
+
+let cumpleJoni = new Date(1994,11,15);
+console.log(cumpleJoni);
