@@ -84,7 +84,7 @@
 
 
 
-//--------------clases, metodos y propotipos-------------
+//----------clases, metodos y propotipos----------
 
 // // Los nombres de las clases siempre comienzan con mayusculas... importante no olvidarse eso
 // class Animal{
@@ -297,16 +297,204 @@
 
 //------- Objeto Date ----------------------------
 
-let fecha = new Date();
+// let fecha = new Date();
 
-console.log(fecha.getFullYear());
-console.log(fecha.getHours());
-console.log(fecha.getMinutes());
-console.log(fecha.getSeconds());
-console.log(fecha.getMilliseconds())
-console.log(fecha.toLocaleString());
-console.log(fecha.toLocaleDateString());
-console.log(fecha.toLocaleTimeString());
+// console.log(fecha.getFullYear());
+// console.log(fecha.getHours());
+// console.log(fecha.getMinutes());
+// console.log(fecha.getSeconds());
+// console.log(fecha.getMilliseconds())
+// console.log(fecha.toLocaleString());
+// console.log(fecha.toLocaleDateString());
+// console.log(fecha.toLocaleTimeString());
 
-let cumpleJoni = new Date(1994,11,15);
-console.log(cumpleJoni);
+// let cumpleJoni = new Date(1994,11,15);
+// console.log(cumpleJoni);
+
+//---------------------------------------------
+
+
+//---------- Objeto Math --------------------
+
+// console.log(Math.ceil(7.2))
+// console.log(Math.floor(7.8))
+// console.log(Math.round(7.2))
+// console.log(Math.round(7.6))
+// console.log(Math.random())
+// console.log(Math.round(Math.random()*100));
+
+//------------------------------------------
+
+
+//--------- Operador de Cortocircuito ---------------
+
+// Cortocircuito || (OR)- cuando el valor de la izquierda en la expresion siempre pueda validar a true, es el valor que se cargara por defecto... quiere decir que si el valor que esta a la izquierda es true, se muestra lo de la izquierda, de ser false se muestra lo de la derecha
+
+// console.log('cadena' || 'valor de la derecha');
+// console.log(1 || 'valor de la derecha');
+// console.log(-2 || 'valor de la derecha');
+// console.log([] || 'valor de la derecha');
+// console.log({} || 'valor de la derecha');
+// console.log('' || 'valor de la derecha');
+// console.log(false || 'valor de la derecha');
+// console.log(null || 'valor de la derecha');
+// console.log(undefined || 'valor de la derecha');
+
+
+
+// // Cortocircuito && (AND)- cuando el valor de la izquierda en la expresion siempre pueda validar a false, es el valor que se cargara por defecto... quiere decir que si el valor que esta a la izquierda es false, se muestra lo de la izquierda, de ser true se muestra lo de la derecha... es lo contrario de OR
+
+// console.log('' && 'valor de la derecha');
+// console.log(false && 'valor de la derecha');
+// console.log(null && 'valor de la derecha');
+// console.log(undefined && 'valor de la derecha');
+// console.log('cadena' && 'valor de la derecha');
+// console.log(1 && 'valor de la derecha');
+// console.log(-2 && 'valor de la derecha');
+// console.log([] && 'valor de la derecha');
+// console.log({} && 'valor de la derecha');
+
+
+// // Un ejemplo con el operador cortocircuito || (OR)
+// function nombreUsuario(nombre){
+//     nombre = nombre || 'Usuario';
+//     console.log(`Hola ${nombre}`);
+// };
+
+
+// nombreUsuario('Jonathan');
+// nombreUsuario();
+
+
+
+// // Un ejemplo con el operador cortocircuito && (AND)
+// function nombrePersona(nombre){
+//     nombre = nombre && 'Usuario';
+//     console.log(`Hola ${nombre}`);
+// };
+
+
+// nombrePersona('')
+// nombrePersona('Jonathan');
+// nombrePersona();
+// nombrePersona(false);
+
+
+//-----------------------------------------------------------
+
+
+
+//----Funcion Anomima Autoejecutable -----------------
+
+// // para crear una funcion anonima ejecutable, debemos encerrar una funcion sin nombre dentro de parentesis (a esto se lo llama encapsulamiento), y luego debemos agregarle otros parentesis que son los que lo va a ejecutar como se ve en los ejemplos de abajo... dentro de los parentesis donde lo encapsulamos, creamos la funcion que vamos a querer crear.
+// (function(){
+//     console.log("Soy una funcion anonima autoejecutable")
+// })();
+
+
+// // En este ejemplo se puede ver como se crea una funcion anonima autoejecutable, y a este se le pasan parametros, los cuales despues definimos en los parentesis del exterior de la encapsulacion... en este ejemplo le dimos los parametros d, w y c, para que dentro de la funcion se pueda utilizar de atajo las letras (porque definimos los valores en los parentesis que lo ejecutan)... y en vez de escribir console.log, simplemente escribimos c.log y seria lo mismo.
+// (function(d,w,c){
+//     console.log(d);
+//     console.log(w);
+//     c.log("Dentro de una funcion anonima autoejecutable,puedo crear algunos atajos como lo son d de document, w de window y c de console.")
+// })(document, window, console);
+
+
+
+//------------------------------------------------------------
+
+
+//------------- Asincronia -----------------------------------
+
+
+// Callback
+// Las callbacks como su nombre lo indica es una llamada de vuelta,lo que esto quiere decir es que al crear una funcion y agregarle una callback como parametro, es que nos devolvera una funcion con los otros parametros que le pasamos(si es que le pasamos otros parametros)...acontinuacion hay unos ejemplos realizados para poder comprender mejor las callbacks.
+
+
+// function cuadradoCallback(value, callback){
+//     setTimeout(()=>{
+//         callback(value, value * value);
+//     }, 2 | Math.random()*1000)
+// }
+
+
+// cuadradoCallback(5, (value, result)=>{
+//     console.log(`Inicia Callback`);
+//     console.log(`Callback ${value}, ${result}`);
+// })
+
+
+
+
+// function sayHello(name){
+//     console.log(`Hola ${name} como estas hoy?`);
+// }
+
+// function userName(callback){
+//     let name = prompt(`Por favor ingresa tu nombre`);
+//     callback(name);
+// };
+
+
+// userName(sayHello);
+
+
+
+
+// function matematicas(n1, n2, callback){
+//     setTimeout(()=>{
+//         callback(n1,n2);
+//     }, 2000);
+// };
+
+
+
+// matematicas(25,5, (a,b)=>{
+//     console.log(a + b);
+// });
+
+// matematicas(25,5, (a,b)=>{
+//     console.log(a - b);
+// });
+
+// matematicas(25,5, (a,b)=>{
+//     console.log(a * b);
+// });
+
+// matematicas(25,5, (a,b)=>{
+//     console.log(a / b);
+// });
+
+
+//-----------------------------------------------------------
+
+
+// Promise
+
+// function cuadradoPromise(value){
+//     if(typeof value !== 'number'){
+//         return Promise.reject(`Error el valor ingresado '${value}' no es un numero`)
+//     }
+
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             resolve({
+//                 value,
+//                 result: value * value
+//             });
+//         }, 2000);
+//     });
+// }
+
+// cuadradoPromise('6')
+//     .then((obj)=>{
+//     console.log(`Promise: ${obj.value}, ${obj.result}`);
+//     })
+
+//     .catch(err => console.error(err));
+
+
+
+// Async Await
+
+
