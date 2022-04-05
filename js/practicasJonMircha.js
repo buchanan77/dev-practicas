@@ -486,7 +486,7 @@
 //     });
 // }
 
-// cuadradoPromise('6')
+// cuadradoPromise(6)
 //     .then((obj)=>{
 //     console.log(`Promise: ${obj.value}, ${obj.result}`);
 //     })
@@ -495,6 +495,161 @@
 
 
 
+
 // Async Await
 
+// async function funcionAsincronaDeclarada(){
+//     try{
+//         console.log('Inicio Async Function');
+        
+//         let obj = await cuadradoPromise(0);
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
 
+//         obj = await cuadradoPromise(1);
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+
+//         obj = await cuadradoPromise(2);
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+
+//         obj = await cuadradoPromise(3);
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+
+//         obj = await cuadradoPromise('4');
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+
+//         obj = await cuadradoPromise(5);
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+
+//         console.log('Fin Async Function');
+//     }
+//     catch(err){
+//         console.error(err);
+//     };
+// }
+
+// funcionAsincronaDeclarada();
+
+
+
+
+
+
+//--------------- DOM --------------------------------
+
+//-------------- attribute y dataset -----------------
+
+// const $enlace = document.querySelector('#enlace');
+// const $enlace2 = document.querySelector('#enlace2');
+
+
+// $enlace.setAttribute('href', 'https://youtube.com');
+// $enlace2.setAttribute('href', 'https:google.com.ar/');
+
+// $enlace.setAttribute('target', '_blank');
+// $enlace2.setAttribute('target', '_blank');
+// $enlace.removeAttribute('class');
+// console.log($enlace.hasAttribute('class'));
+// console.log($enlace.getAttribute('id'));
+// $enlace.setAttribute('class', 'link-dom');
+
+// console.log($enlace.getAttribute('data-description'));
+// console.log($enlace2.dataset.description);
+// $enlace2.setAttribute('data-description', 'Acabo de modificar la descripcion del atributo data del $enlace2... Ahora esta descripcion te dice a donde te lleva el enlace, que es a la pagina principal de Google');
+// console.log($enlace2.dataset.description);
+
+// $enlace.dataset.description = 'Acabo de modificar la description del atributo data del $enlace... Ahora esta description te dice a donde te lleva el enlace, que es a la pagina principal de Youtube';
+// console.log($enlace.dataset.description);
+
+
+
+
+//--------------------- Estilos y variables en js ------------------------------------------
+// console.log($enlace.style);
+// console.log(getComputedStyle($enlace));
+
+
+// const $html = document.documentElement,
+// $body = document.body;
+
+// let varSeconderyColor = getComputedStyle($html).getPropertyValue('--secondery-color');
+
+// $body.style.background = varSeconderyColor;
+
+// const $img = document.querySelector('.backpack-brown');
+
+// $img.classList.toggle('ocultar');
+
+
+
+//-------------------- texto y html -----------------------------------------
+
+// const $ul = document.getElementById('paises');
+
+// $ul.innerHTML = 
+// `<li>Argentina</li>
+// <li>Peru</li>
+// <li>Uruguay</li>
+// <li>Brasil</li>
+// <li>Paraguay</li>
+// <li>Bolivia</li>
+// <li>Chile</li>
+// `
+
+
+//---------------- fragment -------------------------------------------------
+
+// document.write("<h2>Nombres agregados dinamicamente utilizando Fragment</h2>")
+
+
+// const $fragment = document.createDocumentFragment(),
+// $listaNombres = document.createElement('ul'),
+// nombres = ['Rocio','Emily','Phoebe','Ailen','Naomi','Lexie'];
+
+// nombres.forEach(nombre =>{
+//     const $li = document.createElement('li');
+//     $li.textContent = nombre;
+//     $fragment.appendChild($li)
+// });
+
+// $listaNombres.appendChild($fragment);
+// document.body.appendChild($listaNombres);
+
+
+
+
+//------------------- Eventos --------------------------------------
+
+// const $btnAlert = document.querySelector('#mostrar-alert');
+
+// function mostrarAlert(nombre){
+//     alert(`Hola ${nombre}, bienvenido, este es un alert creado con una escucha a la cual le pasamos un parametro desde la funcion de afuera`);
+// };
+
+// const removerEvento = (e)=>{
+//     alert(`Alert de tipo ${e.type}.`)
+//     console.log(e);
+//     $btnAlert.removeEventListener('dblclick', removerEvento);
+//     $btnAlert.disabled = true;
+// }
+
+
+// $btnAlert.addEventListener('click', (e)=>{
+//     alert('Soy un alert');
+//     console.log(e.target);
+// })
+
+// $btnAlert.addEventListener('click', ()=>{
+//     mostrarAlert('Jonathan');
+// });
+
+// $btnAlert.addEventListener('dblclick',removerEvento);
+
+
+
+document.addEventListener('click', (e)=>{
+    console.log('Diste click en ', e.target);
+
+    if(e.target.matches('#primera-seccion #enlace')){
+        console.log('Acabas de oprimir el enlace.');
+    }
+})
